@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="GBMCodeChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="biometricImageView" destination="aXA-3t-dYz" id="lm4-QC-JGp"/>
+                <outlet property="messageLabel" destination="7pu-iE-a5T" id="ZYg-km-B5Q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-ZD-NjU">
+                    <rect key="frame" x="117" y="500" width="180" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ec9-Tq-oTf"/>
+                        <constraint firstAttribute="width" constant="180" id="FyU-HV-5at"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                    <connections>
+                        <action selector="onLoginButtonTap:" destination="-1" eventType="touchUpInside" id="Row-pe-9eK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-da-p64">
+                    <rect key="frame" x="166.5" y="181" width="81" height="32"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-3t-dYz">
+                    <rect key="frame" x="147" y="244" width="120" height="118.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="0Lo-5o-x0n"/>
+                        <constraint firstAttribute="width" constant="120" id="Rdu-lX-g0H"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the FaceID to login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pu-iE-a5T">
+                    <rect key="frame" x="117" y="437.5" width="180" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="0BS-da-p64" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Bb-sn-QKf"/>
+                <constraint firstItem="aXA-3t-dYz" firstAttribute="top" secondItem="0BS-da-p64" secondAttribute="bottom" constant="30.5" id="68c-xI-q0m"/>
+                <constraint firstItem="7pu-iE-a5T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bdy-VJ-hEa"/>
+                <constraint firstItem="7pu-iE-a5T" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IDl-Zg-0eU"/>
+                <constraint firstItem="aXA-3t-dYz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JPp-rO-6Qu"/>
+                <constraint firstItem="7pu-iE-a5T" firstAttribute="top" secondItem="aXA-3t-dYz" secondAttribute="bottom" constant="74" id="QFm-vw-GdF"/>
+                <constraint firstItem="Sbd-ZD-NjU" firstAttribute="top" secondItem="7pu-iE-a5T" secondAttribute="bottom" constant="41.5" id="Sj5-Mi-gZl"/>
+                <constraint firstItem="Sbd-ZD-NjU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qQo-dU-KJK"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="faceid" catalog="system" width="128" height="115"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
